@@ -118,6 +118,7 @@ public class DrivetrainSubsystem extends SubsystemBase {
             FRONT_LEFT_MODULE_STEER_OFFSET
     );
 
+    m_frontLeftModule = Mk4iSwerveModuleHelper.createNeo();
     // We will do the same for the other modules
     m_frontRightModule = Mk4iSwerveModuleHelper.createFalcon500(
             tab.getLayout("Front Right Module", BuiltInLayouts.kList)

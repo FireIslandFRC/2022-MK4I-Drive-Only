@@ -101,7 +101,7 @@ public class DrivetrainSubsystem extends SubsystemBase {
     // By default we will use Falcon 500s in standard configuration. But if you use a different configuration or motors
     // you MUST change it. If you do not, your code will crash on startup.
     // FIXME Setup motor configuration
-    m_frontLeftModule = Mk4iSwerveModuleHelper.createFalcon500(
+    m_frontLeftModule = Mk4iSwerveModuleHelper.createNeo(
             // This parameter is optional, but will allow you to see the current state of the module on the dashboard.
             tab.getLayout("Front Left Module", BuiltInLayouts.kList)
                     .withSize(2, 4)
@@ -109,35 +109,35 @@ public class DrivetrainSubsystem extends SubsystemBase {
             // This can either be STANDARD or FAST depending on your gear configuration
             Mk4iSwerveModuleHelper.GearRatio.L2,
             // This is the ID of the drive motor
-            FRONT_LEFT_MODULE_DRIVE_MOTOR,
+            FRONT_LEFT_MODULE_DRIVE_MOTOR
             // This is the ID of the steer motor
-            FRONT_LEFT_MODULE_STEER_MOTOR,
+            FRONT_LEFT_MODULE_STEER_MOTOR
             // This is the ID of the steer encoder
-            FRONT_LEFT_MODULE_STEER_ENCODER,
+            FRONT_LEFT_MODULE_STEER_ENCODER
             // This is how much the steer encoder is offset from true zero (In our case, zero is facing straight forward)
             FRONT_LEFT_MODULE_STEER_OFFSET
     );
 
     // We will do the same for the other modules
-    m_frontRightModule = Mk4iSwerveModuleHelper.createFalcon500(
+    m_frontRightModule = Mk4iSwerveModuleHelper.createNeo(
             tab.getLayout("Front Right Module", BuiltInLayouts.kList)
                     .withSize(2, 4)
                     .withPosition(2, 0),
             Mk4iSwerveModuleHelper.GearRatio.L2,
-            FRONT_RIGHT_MODULE_DRIVE_MOTOR,
-            FRONT_RIGHT_MODULE_STEER_MOTOR,
-            FRONT_RIGHT_MODULE_STEER_ENCODER,
+            FRONT_RIGHT_MODULE_DRIVE_MOTOR
+            FRONT_RIGHT_MODULE_STEER_MOTOR
+            FRONT_RIGHT_MODULE_STEER_ENCODER
             FRONT_RIGHT_MODULE_STEER_OFFSET
     );
 
-    m_backLeftModule = Mk4iSwerveModuleHelper.createFalcon500(
+    m_backLeftModule = Mk4iSwerveModuleHelper.createNeo(
             tab.getLayout("Back Left Module", BuiltInLayouts.kList)
                     .withSize(2, 4)
                     .withPosition(4, 0),
             Mk4iSwerveModuleHelper.GearRatio.L2,
-            BACK_LEFT_MODULE_DRIVE_MOTOR,
-            BACK_LEFT_MODULE_STEER_MOTOR,
-            BACK_LEFT_MODULE_STEER_ENCODER,
+            BACK_LEFT_MODULE_DRIVE_MOTOR
+            BACK_LEFT_MODULE_STEER_MOTOR
+            BACK_LEFT_MODULE_STEER_ENCODER
             BACK_LEFT_MODULE_STEER_OFFSET
     );
 
@@ -146,9 +146,9 @@ public class DrivetrainSubsystem extends SubsystemBase {
                     .withSize(2, 4)
                     .withPosition(6, 0),
             Mk4iSwerveModuleHelper.GearRatio.L2,
-            BACK_RIGHT_MODULE_DRIVE_MOTOR,
-            BACK_RIGHT_MODULE_STEER_MOTOR,
-            BACK_RIGHT_MODULE_STEER_ENCODER,
+            BACK_RIGHT_MODULE_DRIVE_MOTOR
+            BACK_RIGHT_MODULE_STEER_MOTOR
+            BACK_RIGHT_MODULE_STEER_ENCODER
             BACK_RIGHT_MODULE_STEER_OFFSET
     );
   }

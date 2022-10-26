@@ -33,7 +33,7 @@ public class DrivetrainSubsystem extends SubsystemBase {
   //   <Motor free speed RPM> / 60 * <Drive reduction> * <Wheel diameter meters> * pi
   //  By default this value is setup for a Mk3 standard module using Falcon500s to drive.
   //  An example of this constant for a Mk4 L2 module with NEOs to drive is:
-  //   5880.0 / 60.0 / SdsModuleConfigurations.MK4_L2.getDriveReduction() * SdsModuleConfigurations.MK4_L2.getWheelDiameter() * Math.PI
+  5676.0 / 60.0 / SdsModuleConfigurations.MK4_L2.getDriveReduction() * SdsModuleConfigurations.MK4_L2.getWheelDiameter() * Math.PI
   /**
    * The maximum velocity of the robot in meters per second.
    * <p>
